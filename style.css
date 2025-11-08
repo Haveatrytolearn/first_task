@@ -77,6 +77,11 @@ h1 {
   color: #434141;
    margin-bottom: 20px;
 }
+h2 {
+  font-size: 2.2rem;
+  color: #434141;
+   margin-bottom: 20px;
+}
 
 p {
   font-size: 1rem;
@@ -99,5 +104,107 @@ p {
 
   p {
     font-size: 0.95rem;
+  }
+}
+/* .contact-form */
+.contact-form {
+  padding: 48px 16px;
+  border-radius: 10px;
+  margin: 5px 10px;
+}
+
+.contact-form input,
+.contact-form select {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  padding: 8px;
+}
+
+.contact-form label {
+  display: block;
+  width: 100%;
+}
+
+.contact-form h2 {
+  color: var(--base-dark);
+  margin-bottom: 16px;
+}
+
+.contact-form input[type="submit"] {
+  background-color: var(--action);
+  border: 0;
+  margin-top: 8px;
+  cursor: pointer;
+}
+/*Highlighting settings*/
+/* Base settings */
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* When it's correct */
+input:valid {
+  border-color: #4CAF50;
+  box-shadow: 0 0 4px #4CAF50;
+}
+
+/* When it's wrong */
+input:invalid {
+  border-color: #E53935;
+  box-shadow: 0 0 4px #E53935;
+}
+
+/* When user focuses on the field */
+input:focus {
+  outline: none;
+  border-color: #2196F3;
+  box-shadow: 0 0 5px #2196F3;
+}
+
+
+@media (min-width: 768px) {
+  .contact-form h2 {
+      text-align: center;
+      font-size: 2.5rem;
+  }
+
+  .contact-form form {
+      max-width: 60%;
+      margin: 40px auto;
+  }
+}
+
+/* footer */
+footer {
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.socials-icon {
+  width: 40px;
+  height: 40px;
+}
+
+@media (min-width: 768px) {
+  footer {
+      justify-content: center;
+  }
+
+  footer .socials-icon {
+      margin-left: 20px;
+      margin-right: 20px;
   }
 }
