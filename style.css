@@ -1,4 +1,4 @@
-/* ===== Общие настройки ===== */
+/* ===== General settings ===== */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@ body {
   line-height: 1.6;
 }
 
-/* ===== Навигация ===== */
+/* ===== Navigation ===== */
 .navbar {
   background-color: #2b2b35; /* Тёмная полоса */
   width: 100%;
@@ -24,7 +24,7 @@ body {
   box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Мягкая тень под навбаром */
 }
 
-/* ===== Ссылки ===== */
+/* ===== Links ===== */
 .nav-links {
   list-style: none;
   display: flex;
@@ -41,7 +41,7 @@ body {
   padding-bottom: 5px;
 }
 
-/* Подчёркивание при наведении */
+/* Highlighting when hovering over */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -57,7 +57,7 @@ body {
   width: 100%;
 }
 
-/* Активная страница */
+/* Active webpage */
 .nav-links a.active {
   font-weight: bold;
 }
@@ -66,9 +66,9 @@ body {
   width: 100%;
 }
 
-/* ===== Контент ===== */
+/* ===== Content ===== */
 main {
-  padding: 140px 80px 60px; /* совпадает с padding навбара */
+  padding: 140px 80px 60px; /* the same as padding navbar */
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -88,27 +88,43 @@ p {
   text-align: justify;
 }
 /*======Photo======*/
+/* Layout for name (left) + photo (right) */
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;           /* photo drops below on small screens */
+  margin: 20px 0 30px;
+}
+
 .profile-photo {
-  text-align: end;
-  margin: 10px 0;
+  /* no text-align needed when using flex */
 }
 
 .profile-photo img {
-  width: 180px;           /* adjust as you like */
+  width: 180px;
   height: 180px;
   object-fit: cover;
-  border-radius: 50%;     /* makes it round */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-photo img:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
 }
 
+/* Make image a bit smaller on mobile */
+@media (max-width: 600px) {
+  .profile-photo img {
+    width: 130px;
+    height: 130px;
+  }
+}
 
-/* ===== Адаптация под мобильные устройства ===== */
+/* ===== Adaptationa for mobile devices ===== */
 @media (max-width: 768px) {
   .navbar {
     padding: 15px 30px;
